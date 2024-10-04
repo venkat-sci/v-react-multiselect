@@ -1,29 +1,17 @@
 import { CheckedState } from '@radix-ui/react-checkbox';
 import { useEffect, useState } from 'react';
-import { Checkbox } from './components/ui/checkbox';
-import { Label } from './components/ui/label';
-import { ScrollArea } from './components/ui/scroll-area';
-import { Button } from './components/ui/button';
+import { Checkbox } from './ui/checkbox';
+import { Label } from './ui/label';
+import { ScrollArea } from './ui/scroll-area';
+import { Button } from './ui/button';
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   ChevronsLeftIcon,
   ChevronsRightIcon,
 } from 'lucide-react';
-type DataTypes = {
-  id: string;
-  title: string;
-  isChecked: boolean;
-  isSelected: boolean;
-};
-type Props = {
-  headerLeft?: string;
-  headerRight?: string;
-  inputData: string[];
-  selectedInoutData?: string[];
-  returnValues: (data: string[]) => void;
-};
-const VReactMultiselect = ({
+
+const VReactMultiSelect = ({
   headerLeft = 'Avaliable',
   headerRight = 'Selected',
   inputData = [],
@@ -236,4 +224,4 @@ const VReactMultiselect = ({
   );
 };
 
-export default VReactMultiselect;
+export default VReactMultiSelect;
