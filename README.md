@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+# React + TypeScript + ShadcnUI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This `npm package` allow to select multiple values clasic side by side view
 
-Currently, two official plugins are available:
+[Demo](https://v-react-multiselect.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Options:
 
-## Expanding the ESLint configuration
+- `inputData` Array of strings (Required)
+- `returnValues` a callback function (Required)
+- `selectedInoutData` Array of strngs (Optinal)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Usage
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Example code:
 
 ```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+import useVReactMultiSelect from './hooks/useVReactMultiSelect';
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+function App() {
+  const { VReactMultiSelect } = useVReactMultiSelect();
+
+  // base input Array for feed values
+  const inputData = ['options1', 'options2'];
+
+  // get back the selected values using this call back function as Array
+  const returnValues = (data: string[]) => {
+    console.log(data);
+  };
+
+  // if values already selected pass on this Array
+  const selectedInoutData = ['options1'];
+
+  return (
+    <>
+      <VReactMultiSelect
+        returnValues={returnValues}
+        selectedInoutData={selectedInoutData}
+        inputData={inputData}
+      />
+    </>
+  );
+}
+
+export default App;
 ```
