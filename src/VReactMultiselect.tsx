@@ -20,29 +20,29 @@ type Props = {
   headerLeft?: string;
   headerRight?: string;
   inputData: string[];
+  selectedInoutData?: string[];
   returnValues: (data: string[]) => void;
 };
 const VReactMultiselect = ({
   headerLeft = 'Avaliable',
   headerRight = 'Selected',
   inputData = [],
+  selectedInoutData = [],
   returnValues,
 }: Props) => {
   const requiredData: DataTypes[] = inputData.map((item) => {
+    const isSelected = selectedInoutData.includes(item) ? true : false;
     return {
       id: crypto.randomUUID(),
       title: item,
       isChecked: false,
-      isSelected: false,
+      isSelected: isSelected,
     };
   });
   const [data, setData] = useState<DataTypes[]>(requiredData);
   const [isCheckedAllLeft, setIsCheckedAllLeft] = useState<boolean>(false);
   const [isCheckedAllRight, setIsCheckedAllRight] = useState<boolean>(false);
   useEffect(() => {
-    console.log(
-      data.filter((item) => item.isSelected).map((item) => item.title)
-    );
     returnValues(
       data.filter((item) => item.isSelected).map((item) => item.title)
     );
