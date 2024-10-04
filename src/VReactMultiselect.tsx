@@ -1,5 +1,5 @@
 import { CheckedState } from '@radix-ui/react-checkbox';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Checkbox } from './components/ui/checkbox';
 import { Label } from './components/ui/label';
 import { ScrollArea } from './components/ui/scroll-area';
@@ -19,13 +19,16 @@ type DataTypes = {
 type Props = {
   headerLeft?: string;
   headerRight?: string;
+  inputData: string[];
+  returnValues: (data: string[]) => void;
 };
 const VReactMultiselect = ({
   headerLeft = 'Avaliable',
   headerRight = 'Selected',
+  inputData = [],
+  returnValues,
 }: Props) => {
-  const sampledataAr = ['Option1', 'Option2', 'Option3'];
-  const testData: DataTypes[] = sampledataAr.map((item) => {
+  const requiredData: DataTypes[] = inputData.map((item) => {
     return {
       id: crypto.randomUUID(),
       title: item,
@@ -33,9 +36,17 @@ const VReactMultiselect = ({
       isSelected: false,
     };
   });
-  const [data, setData] = useState<DataTypes[]>(testData);
+  const [data, setData] = useState<DataTypes[]>(requiredData);
   const [isCheckedAllLeft, setIsCheckedAllLeft] = useState<boolean>(false);
   const [isCheckedAllRight, setIsCheckedAllRight] = useState<boolean>(false);
+  useEffect(() => {
+    console.log(
+      data.filter((item) => item.isSelected).map((item) => item.title)
+    );
+    returnValues(
+      data.filter((item) => item.isSelected).map((item) => item.title)
+    );
+  }, [data, returnValues]);
   const handleCheckboxChange = (event: CheckedState, side: string) => {
     if (side === 'left') {
       setIsCheckedAllLeft(event as boolean);
