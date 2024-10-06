@@ -1,8 +1,8 @@
 {
   "name": "v-react-multiselect",
   "private": false,
-  "version": "0.0.1",
-  "description": "V react multiselect",
+  "version": "0.0.2",
+  "description": "A versatile and customizable multiselect component for React applications.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -25,7 +25,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "v-react-multiselect": "^0.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

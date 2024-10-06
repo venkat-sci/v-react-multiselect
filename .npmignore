@@ -1,0 +1,11 @@
+/public
+/src
+/video
+
+ts*
+vite*
+tail*
+roll*
+post*
+eslint*
+comp*
