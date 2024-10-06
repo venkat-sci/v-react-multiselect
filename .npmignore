@@ -1,6 +1,9 @@
 /public
 /src
 /video
+/dist
+
+index.html
 
 ts*
 vite*
