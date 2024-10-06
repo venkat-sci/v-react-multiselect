@@ -1,7 +1,6 @@
-import useVReactMultiSelect from './hooks/useVReactMultiSelect';
+import VReactMultiSelect from './components/VReactMultiSelect';
 
 function App() {
-  const { VReactMultiSelect } = useVReactMultiSelect();
   const inputData = [
     'options1',
     'options2',

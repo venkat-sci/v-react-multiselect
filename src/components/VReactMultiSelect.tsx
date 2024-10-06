@@ -10,6 +10,7 @@ import {
   ChevronsLeftIcon,
   ChevronsRightIcon,
 } from 'lucide-react';
+import { cn } from '../lib/utils';
 
 const VReactMultiSelect = ({
   headerLeft = 'Avaliable',
@@ -118,11 +119,15 @@ const VReactMultiSelect = ({
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex">
       <div className="grid grid-cols-12 gap-2 min-h-52 overflow-auto">
         {/* Left section */}
         <div className="flex flex-col col-span-5 border rounded-md h-full">
-          <div className="bg-slate-200 space-x-1 flex items-center h-6">
+          <div
+            className={cn(
+              `bg-slate-50 border-b space-x-1 flex items-center h-6`
+            )}
+          >
             <Checkbox
               className="ml-1"
               checked={isCheckedAllLeft}
@@ -138,14 +143,14 @@ const VReactMultiSelect = ({
                 .map((item) => {
                   return (
                     <li
-                      className="items-center space-x-1 hover:bg-slate-200"
+                      className="items-center space-x-1 hover:bg-slate-50"
                       key={item.id}
                       onClick={() =>
                         handleCheckboxChangeSingle(!item.isChecked, item.id)
                       }
                     >
                       <Checkbox className="ml-1" checked={item.isChecked} />
-                      <Label>{item.title}</Label>
+                      <span>{item.title}</span>
                     </li>
                   );
                 })}
@@ -187,7 +192,11 @@ const VReactMultiSelect = ({
         {/* Right section */}
 
         <div className="flex flex-col col-span-5 border rounded-md h-full">
-          <div className="bg-slate-200 space-x-1 flex items-center h-6">
+          <div
+            className={cn(
+              `bg-slate-50 border-b space-x-1 flex items-center h-6`
+            )}
+          >
             <Checkbox
               className="ml-1"
               checked={isCheckedAllRight}
@@ -204,14 +213,14 @@ const VReactMultiSelect = ({
                   .map((item) => {
                     return (
                       <li
-                        className="space-x-1 items-center hover:bg-slate-200"
+                        className="space-x-1 items-center hover:bg-slate-50"
                         key={item.id}
                         onClick={() =>
                           handleCheckboxChangeSingle(!item.isChecked, item.id)
                         }
                       >
                         <Checkbox className="ml-1" checked={item.isChecked} />
-                        <Label>{item.title}</Label>
+                        <span>{item.title}</span>
                       </li>
                     );
                   })}
