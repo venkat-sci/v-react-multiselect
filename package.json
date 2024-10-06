@@ -52,5 +52,23 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venkat-sci/v-react-multiselect.git"
+  },
+  "author": "VenkatG",
+  "license": "ISC",
+  "keywords": [
+    "react",
+    "typescript",
+    "multiselect",
+    "shadcn",
+    "select",
+    "react-multiselect",
+    "react-select",
+    "react-select-typescript",
+    "tailwindcss",
+    "vite"
+  ]
 }
