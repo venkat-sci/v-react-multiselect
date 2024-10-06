@@ -1,6 +1,6 @@
 # React + TypeScript + ShadcnUI
 
-This `npm package` allow to select multiple values clasic side by side view
+This npm package `v-react-multiselect` allow to select multiple values clasic side by side view
 
 [Demo](https://v-react-multiselect.vercel.app/)
 
