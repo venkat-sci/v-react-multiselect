@@ -1,3 +1,2 @@
-import useVReactMultiSelect from './hooks/useVReactMultiSelect';
-
-export default useVReactMultiSelect;
+import VReactMultiSelect from './components/VReactMultiSelect';
+export default VReactMultiSelect;
