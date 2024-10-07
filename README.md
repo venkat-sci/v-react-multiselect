@@ -47,13 +47,13 @@ function App() {
   };
 
   // (Optinal) if values already selected pass on this Array
-  const selectedInoutData = ['options1'];
+  const selectedInputData = ['options1'];
 
   return (
     <>
       <VReactMultiSelect
         returnValues={returnValues}
-        selectedInoutData={selectedInoutData}
+        selectedInputData={selectedInputData}
         inputData={inputData}
       />
     </>
