@@ -26,6 +26,7 @@ function App() {
   return (
     <>
       <VReactMultiSelect
+        className="w-[600px] flex justify-evenly"
         returnValues={returnValues}
         selectedInputData={selectedInputData}
         inputData={inputData}
