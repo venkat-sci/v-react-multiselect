@@ -9,7 +9,7 @@ components.json
 eslint*
 package-lock.json
 postcss.config.js
-rollup.config
+rollup.config.js
 tailwind.config.js
 tsconfig*
 vite*
