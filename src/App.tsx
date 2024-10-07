@@ -19,7 +19,7 @@ function App() {
     'options15',
     'options16',
   ];
-  const selectedInoutData = ['options1'];
+  const selectedInputData = ['options1'];
   const returnValues = (data: string[]) => {
     console.log(data);
   };
@@ -27,7 +27,7 @@ function App() {
     <>
       <VReactMultiSelect
         returnValues={returnValues}
-        selectedInoutData={selectedInoutData}
+        selectedInputData={selectedInputData}
         inputData={inputData}
       />
     </>

@@ -8,6 +8,6 @@ type Props = {
   headerLeft?: string;
   headerRight?: string;
   inputData: string[];
-  selectedInoutData?: string[];
+  selectedInputData?: string[];
   returnValues: (data: string[]) => void;
 };
