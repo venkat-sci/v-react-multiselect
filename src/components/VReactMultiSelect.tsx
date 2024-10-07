@@ -16,11 +16,11 @@ const VReactMultiSelect = ({
   headerLeft = 'Avaliable',
   headerRight = 'Selected',
   inputData = [],
-  selectedInoutData = [],
+  selectedInputData = [],
   returnValues,
 }: Props) => {
   const requiredData: DataTypes[] = inputData.map((item) => {
-    const isSelected = selectedInoutData.includes(item) ? true : false;
+    const isSelected = selectedInputData.includes(item) ? true : false;
     return {
       id: crypto.randomUUID(),
       title: item,
