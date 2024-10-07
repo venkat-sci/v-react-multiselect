@@ -1,7 +1,7 @@
 {
   "name": "v-react-multiselect",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A versatile and customizable multiselect component for React applications.",
   "main": "index.js",
   "module": "index.mjs",
@@ -58,7 +58,7 @@
     "url": "git+https://github.com/venkat-sci/v-react-multiselect.git"
   },
   "author": "VenkatG",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "react",
     "typescript",
