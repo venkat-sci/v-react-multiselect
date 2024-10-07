@@ -1,6 +1,6 @@
-![V React Multiselect screenshot](https://raw.githubusercontent.com/venkat-sci/v-react-multiselect/refs/heads/master/images/vreactmultiselect.png)
+## v-react-multiselect
 
-## React + TypeScript + tailwindcss
+![V React Multiselect screenshot](https://raw.githubusercontent.com/venkat-sci/v-react-multiselect/refs/heads/master/images/vreactmultiselect.png)
 
 `v-react-multiselect` npm package a versatile and customizable multiselect component for React applications.
 
@@ -31,6 +31,7 @@ npm install v-react-multiselect
 - `inputData` Array of strings (Required)
 - `returnValues` a callback function (Required)
 - `selectedInputData` Array of strngs (Optinal)
+- `className` strng (Optinal)
 
 ## Basic Usage
 
@@ -49,9 +50,12 @@ function App() {
   // (Optinal) if values already selected pass on this Array
   const selectedInputData = ['options1'];
 
+  // (Optinal) css class for top most  div
+  const className = '';
   return (
     <>
       <VReactMultiSelect
+        className={className}
         returnValues={returnValues}
         selectedInputData={selectedInputData}
         inputData={inputData}
