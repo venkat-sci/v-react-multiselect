@@ -5,6 +5,7 @@ type DataTypes = {
   isSelected: boolean;
 };
 type Props = {
+  className?: string;
   headerLeft?: string;
   headerRight?: string;
   inputData: string[];

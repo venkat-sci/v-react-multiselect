@@ -13,6 +13,7 @@ import {
 import { cn } from '../lib/utils';
 
 const VReactMultiSelect = ({
+  className,
   headerLeft = 'Avaliable',
   headerRight = 'Selected',
   inputData = [],
@@ -119,7 +120,7 @@ const VReactMultiSelect = ({
   };
 
   return (
-    <div className="flex">
+    <div className={cn('flex', className)}>
       <div className="grid grid-cols-12 gap-2 min-h-52 overflow-auto">
         {/* Left section */}
         <div className="flex flex-col col-span-5 border rounded-md h-full">
