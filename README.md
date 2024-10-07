@@ -22,7 +22,9 @@ content: [
 
 ### npm
 
-`npm install v-react-multiselect`
+```
+npm install v-react-multiselect
+```
 
 ### Options:
 
@@ -36,15 +38,15 @@ content: [
 import VReactMultiSelect from 'v-react-multiselect';
 
 function App() {
-  // base input Array for feed values
+  // (Required) base input Array for feed values
   const inputData = ['options1', 'options2'];
 
-  // get back the selected values using this call back function as Array
+  // (Required) get back the selected values using this call back function as Array
   const returnValues = (data: string[]) => {
     console.log(data);
   };
 
-  // if values already selected pass on this Array
+  // (Optinal) if values already selected pass on this Array
   const selectedInoutData = ['options1'];
 
   return (
