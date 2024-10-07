@@ -5,10 +5,11 @@
 
 index.html
 
-ts*
-vite*
-tail*
-roll*
-post*
+components.json
 eslint*
-comp*
+package-lock.json
+postcss.config.js
+rollup.config
+tailwind.config.js
+tsconfig*
+vite*
